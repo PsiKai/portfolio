@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,700&display=swap");
+
+:root {
+  --white: #f4f4f2;
+  --light: #e8e8e8;
+  --medium: #bbbfca;
+  --dark: #495464;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--dark);
+  margin: 0;
+  display: grid;
+  grid-template-rows: fit-content(8rem) auto fit-content(3rem);
+  grid-template-areas: "header" "main" "footer";
+  height: 100%;
+}
+
+header {
+  background-color: var(--dark);
+  color: var(--white);
+  font-family: "Courier Prime", monospace;
+  grid-area: header;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+main img {
+  width: 100%;
+}
+
+.quick-bio {
+  padding: 1rem;
+  background-color: var(--light);
+  box-shadow: 0 0 5px 0 var(--medium);
+}
+
+.my-works h1 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.website-examples {
+  margin: 2rem 0;
+  height: 100vh;
+  vertical-align: middle;
+}
+
+.screen-previews {
+  position: relative;
+}
+
+.mobile-preview {
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (min-width: 40rem) {
+  .quick-bio {
+    padding: 2rem 5rem;
+    margin: 4rem 0;
+  }
+
+  .my-works h1 {
+    font-size: 3rem;
+  }
+
+  .website-examples {
+    height: fit-content;
+    margin: 6rem 0;
+  }
+}
