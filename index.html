@@ -6,78 +6,132 @@
     <title>David's Portfolio</title>
     <link rel="shortcut icon" href="images/business-man.png">
     <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/6d8e4d74f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>David Irvin</h1>
+        <img class="avatar" src="images/business-man-lg.png" alt="avatar">
         <h2>Web Developer</h2>
-        
+        <a href="https://www.linkedin.com/in/david-irvin-2236b6150/">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/PsiKai">
+            <i class="fab fa-github-square fa-2x"></i>
+        </a>
+        <i class="fas fa-file fa-2x"></i>
     </header>
     <main>
+        <div class="backdrop"></div>
+        <div class="modal">
+            <img src="images/Resume.jpg" alt="resume">
+        </div>
         <div class="quick-bio">
             <h2>Quick Bio</h2>
-            <p>I'm passionate about creating great user experiences through tasteful and intuitive UIs that looking stunning on both desktop and mobile screens.  Even though my focus is on front-end development, I still took the time to immerse myself in backend technologies so I could build full stack applications for my clients who need them.</p>
+            <p>I'm passionate about creating great user experiences through tasteful and intuitive UIs that look stunning on both desktop and mobile screens.  Even though my focus is on front-end development, I still took the time to immerse myself in backend technologies so I could build full-stack applications for my clients who need them.</p>
         </div>
         <section class="my-works">
-           <h1>Here's a few of my works</h1>
+           <h1>Here are a few of my works</h1>
+           <hr>
         <div class="website-examples">
+            <h2 class="website-example"> 
+                <a href="https://kaylakossajda.com">kaylakossajda.com</a>
+            </h2>
             <div class="screen-previews">
                 <img src="images/kaylakossajda-landing.png" alt="kaylakossajda-landing">
                 <img class="mobile-preview" src="images/kaylakossaja-mobilelanding.png" alt="kaylakossaja-mobilelanding">
             </div>
-            <h3>Live site: 
-                <a href="https://kaylakossajda.com">kaylakossajda.com</a>
-            </h3>
-            <p>A full stack application for an artist to keep her works from different media in one place.  She is a painter, drawer, photographer, and graphic designer, and social media just wasn't fitting the bill.  Now she can direct any potential client to her website so they can easily see everything she has done.  She can log in and make changes to the content by adding, deleting, or editing images.</p>
-            <p>Technologies used: Node/Express backend, Google Cloud Storage, EJS templating, CSS, Bootstrap, and JavaScript.</p>
+            <div class="website-description">
+                <h3 class="source-code">Source Code   
+                    <a href="https://github.com/PsiKai/kaylasite">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </h3>
+            
+                <p>A full stack application for an artist to keep her works from different media in one place.  She is a painter, illustrator, photographer, and graphic designer, and social media just wasn't fitting the bill.  Now she can direct any potential client to her website so they can easily see everything she has done.  She can log in and make changes to the content by adding, deleting, or editing images.</p>
+                <p><b>Technologies used:</b> Node/Express backend, Google Cloud Storage, EJS templating, CSS, Bootstrap, and JavaScript.</p>
+            </div>
+            
         </div>
+        <hr>
         <div class="website-examples">
+            <h2 class="website-example">
+                <a href="https://chef-horror-mini-stories.com">chef-horror-mini-stories.com</a>
+            </h2>
             <div class="screen-previews">
                 <img src="images/chef-horror-landing.png" alt="chef-horror-landing">
-                <img class="mobile-preview" src="images/chef-horror-landingmobile.png" alt="chef-horror-landingmobile">
+                <img class="mobile-preview" src="images/chef-horror-mobile-landing.png" alt="chef-horror-mobile-landing">
             </div>
-            <h3>Live site: 
-                <a href="https://chef-horror-mini-stories.com">chef-horror-mini-stories.com</a>
-            </h3>
-            <p>A site for a chef-author who writes imaginative novellas with a horror motif.  I adapted the concept from a cobbled together SquareSpace site to a unified and seemless thematic site that not only showcases his books, but also gives the user a peak into the mind of the author.</p>
-            <p>Technologies used: Only HTML and CSS.  No JavaScript needed!</p>
+            <div class="website-description">
+                <h3 class="source-code">Source Code  
+                    <a href="https://github.com/PsiKai/chefhorror">
+                      <i class="fab fa-github"></i>
+                    </a>
+                </h3>
+                <p>A site for a chef-author who writes imaginative novellas with a horror motif.  I adapted the concept from a cobbled together SquareSpace site to a unified and seemless thematic site that not only showcases his books, but also gives the user a peak into the mind of the author.</p>
+                <p><b>Technologies used:</b> Only HTML and CSS.  No JavaScript needed!</p>
+            </div>
+            
         </div>
+        <hr>
         <div class="website-examples">
+            <h2 class="website-example">
+                <a href="https://leather-journal.herokuapp.com">leather-journal.herokuapp.com</a>
+            </h2>
             <div class="screen-previews">
                 <img src="images/planner-landing.png" alt="planner-landing">
                 <img class="mobile-preview" src="images/planner-landingmobile.png" alt="planner-landingmobile">
             </div>
-            <h3>Live site: 
-                <a href="https://leather-journal.herokuapp.com">leather-journal.herokuapp.com</a>
-            </h3>
-            <p>Another full stack application with a calming and tactile feel.  The UI emulates a leather-bound day planner where the user can select any date and start writing activities for the day.  Once completed, the list items can be crossed-off with the click of the mouse, and the database keeps track of every user's lists and the completed items.</p>
-            <p>Technologies used: Node/Express backend, MongoDB, React.js frontend framework, JavaScript ES6, JSX, Material-UI, Materialize, and CSS</p>
-        </div> 
-        </section>
+            <div class="website-description">
+                <h3 class="source-code">Source Code  
+                    <a href="https://github.com/PsiKai/leather-planner">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </h3>
+                <p>Another full stack application with a calming and tactile feel.  The UI emulates a leather-bound day planner where the user can select any date and start writing activities for the day.  Once completed, the list items can be crossed-off with the click of the mouse, and the database keeps track of every user's lists and the completed items.</p>
+                <p><b>Technologies used:</b> Node/Express backend, MongoDB, React.js frontend framework, JavaScript ES6, JSX, Material-UI, Materialize, and CSS</p>
+            </div>
+            
+        </div>
+        <hr>
         
+        </section>
+        <section class="background-info">
         <div>
             <h2>My History</h2>
-            <p>I'm a classically trained musician who earned a degree in classical guitar performance, and a former chef of fine dining restaurants.  Both of these skills contribute to my ability of understanding user experience in a fundamental way.</p>
-            <p>My previous experience studying music gave me an eye for detail that allows me to spot errors in code, as well as create pixel-perfect layouts.  This comes from years of analyzing musical scores for the slightest marks of ink on the page that can convey a completely different meaning.  I also learned the value of presenting polished works to my audience through hours of honing and perfecting.</p>
-            <p>In the chef world, I had to learn how to communicate quickly and effectively with my team to get the desired results.  Everything is "on-the-fly" and every deadline is immediate!  Working in fine-dining gave me the ability to take something as chaotic as a bustling kitchen, and display it in a neat, and beautiful package to deliver to the guests, and do it hundreds of times a night.</p>
+            <img class="bio-icon" src="images/biography.png" alt="biography icon">
+            <p>I'm a classically trained musician who earned a degree in classical guitar performance, and a former chef of fine dining restaurants.  Both of these skills contribute to my ability to understand user experience in a fundamental way.</p>
+            <p>My previous experience studying music gave me an eye for detail that allows me to spot errors in code, as well as create pixel-perfect layouts.  This comes from years of analyzing musical scores for the slightest marks of ink on the page that can convey a completely different meaning.  I also learned the value of presenting polished works to my audience through hours of honing and perfecting my craft.</p>
+            <p>In the chef world, I had to learn how to communicate quickly and effectively with my team to get the desired results.  In the kitchen everything is "on-the-fly" and every deadline is immediate!  Working in fine-dining gave me the ability to take something as chaotic as a bustling kitchen, and display it in a neat, beautiful package to deliver to the guests, and do it hundreds of times a night.</p>
         </div>
-        <div>
+        <div class="web-dev-info">
             <h2>Web Development and Me</h2>
+            <img class="programmer-icon" src="images/programmer.png" alt="programmer-icon">
             <p>The pandemic unfortunately left me jobless almost immediately.  But this was the perfect opportunity I needed to transition into a career with longevity and stability, even in an uncertain ecomony.</p>
             <p>I took it upon myself to learn web development, and I knew I wanted to focus on front-end.  I taught myself with the help of many online courses, bootcamps, and tutorials until I became adept in best practices using modern CSS, JavaScript, and one of the most in-demand front-end frameworks: React.js.</p>
             <p>My learning continues every day.  I'm always looking for new tricks and tips, and building constantly, even if they are only personal projects for my own development.  Aside from that, I have had a handful of real-world clients that I was able to help build websites for, and it has been extremely rewarding.</p>
             <p>Ultimately, I would like to join a team of developers so I can advance to the next stage of my new career.</p>
         </div>
+    </section>
     </main>
     
     <footer>
-        <div>Icons made by 
-            <a href="https://www.flaticon.com/free-icon/business-man_3048127" title="photo3idea_studio">photo3idea_studio
-            </a> 
+        <a href="https://www.linkedin.com/in/david-irvin-2236b6150/">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/PsiKai">
+            <i class="fab fa-github-square fa-2x"></i>
+        </a>
+        <i class="fas fa-file fa-2x"></i>
+        <div class="attribution">Icons made by 
+            <a href="https://www.flaticon.com/free-icon/business-man_3048127" title="photo3idea_studio">photo3idea_studio</a>, 
+            <a href="http://www.freepik.com/" title="Freepik">Freepik</a>, 
+            <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> 
             from 
             <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com
             </a>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

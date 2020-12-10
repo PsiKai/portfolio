@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
 
 :root {
   --white: #f4f4f2;
@@ -23,6 +24,7 @@ body {
   grid-template-rows: fit-content(8rem) auto fit-content(3rem);
   grid-template-areas: "header" "main" "footer";
   height: 100%;
+  font-family: "Mukta", sans-serif;
 }
 
 header {
@@ -32,10 +34,36 @@ header {
   grid-area: header;
   text-align: center;
   width: 100%;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6);
+}
+
+footer i,
+header i {
+  margin: 0 1rem;
+}
+
+footer i:hover,
+header i:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header h1 {
   font-size: 3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.avatar {
+  width: 50%;
+  border-radius: 50%;
+  background-color: var(--medium);
+  border: 2px solid var(--light);
+  animation: float 5s ease-in-out infinite;
 }
 
 main {
@@ -44,14 +72,47 @@ main {
   margin: auto;
 }
 
+.backdrop {
+  display: none;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: opacity 200ms linear;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  opacity: 0;
+  /* transform: translateY(-3rem); */
+  transition: opacity 200ms ease-out;
+  z-index: 200;
+  top: 10%;
+  width: calc(100% - 2rem);
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.open {
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+}
+
 main img {
   width: 100%;
 }
 
 .quick-bio {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background-color: var(--light);
   box-shadow: 0 0 5px 0 var(--medium);
+  margin: 2rem 0;
 }
 
 .my-works h1 {
@@ -59,10 +120,35 @@ main img {
   font-size: 1.8rem;
 }
 
+hr {
+  color: var(--light);
+}
+
 .website-examples {
   margin: 2rem 0;
-  height: 100vh;
+  /* height: 100vh; */
   vertical-align: middle;
+}
+
+.website-example {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.source-code {
+  display: inline-block;
+  border: 1px solid var(--medium);
+  background-color: var(--light);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: background-color 200ms ease-out;
+}
+
+.source-code:hover {
+  background-color: var(--dark);
+  color: var(--white);
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
 }
 
 .screen-previews {
@@ -74,13 +160,63 @@ main img {
   position: absolute;
   bottom: 0;
   right: 20px;
+  transition: transform 400ms ease-out;
+}
+
+.mobile-preview:hover {
+  transform: scale(2) translateX(-15%);
+  transition: transform 400ms ease-in;
+}
+
+.bio-icon,
+.programmer-icon {
+  width: 40%;
+  background-color: var(--light);
+  border-radius: 0.5rem;
+  /* margin-bottom: 0.5rem; */
+}
+
+.bio-icon {
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.programmer-icon {
+  padding: 0.5rem;
+  float: right;
+  margin-left: 0.5rem;
+}
+
+.web-dev-info h2 {
+  text-align: right;
 }
 
 footer {
+  text-align: center;
+  position: relative;
   grid-area: footer;
+  background-color: var(--light);
+  padding-top: 2rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+}
+
+.attribution {
+  text-align: left;
 }
 
 @media (min-width: 40rem) {
+  .avatar {
+    width: 300px;
+  }
+
+  .modal {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+    max-height: 100vh;
+  }
+
   .quick-bio {
     padding: 2rem 5rem;
     margin: 4rem 0;
@@ -93,5 +229,48 @@ footer {
   .website-examples {
     height: fit-content;
     margin: 6rem 0;
+  }
+
+  .website-example {
+    text-decoration: none;
+    transition: text-decoration 200ms ease-out;
+  }
+
+  .website-example:hover {
+    text-decoration: underline;
+    transition: text-decoration 200ms ease-in;
+  }
+
+  .mobile-preview:hover {
+    transform: scale(2) translate(-25%, -25%);
+    transition: transform 400ms ease-in;
+  }
+
+  .website-description {
+    padding: 0 4rem;
+  }
+
+  .background-info {
+    padding: 0 2rem;
+  }
+
+  .bio-icon,
+  .programmer-icon {
+    width: 30%;
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
   }
 }
