@@ -89,10 +89,9 @@ main {
   display: none;
   position: fixed;
   opacity: 0;
-  /* transform: translateY(-3rem); */
   transition: opacity 200ms ease-out;
   z-index: 200;
-  top: 10%;
+  top: 15%;
   width: calc(100% - 2rem);
   background: white;
   border: 1px solid #ccc;
@@ -210,7 +209,7 @@ footer {
   }
 
   .modal {
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
     max-width: 800px;
@@ -242,7 +241,7 @@ footer {
   }
 
   .mobile-preview:hover {
-    transform: scale(2) translate(-25%, -25%);
+    transform: scale(2) translate(-25%, -15%);
     transition: transform 400ms ease-in;
   }
 
@@ -252,6 +251,7 @@ footer {
 
   .background-info {
     padding: 0 2rem;
+    margin: 4rem 0;
   }
 
   .bio-icon,
