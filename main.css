@@ -226,6 +226,10 @@ footer {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
 }
 
+footer i {
+  margin-bottom: 1rem;
+}
+
 .attribution {
   text-align: left;
   font-size: 0.5rem;
@@ -276,6 +280,7 @@ footer {
     right: -70px;
   }
 
+  .mobile-preview-zoom,
   .mobile-preview:hover {
     transform: scale(1) translate(-25%, -15%);
     transition: transform 400ms ease-in;
