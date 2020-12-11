@@ -171,10 +171,15 @@ hr {
   transition: transform 400ms ease-out;
 }
 
-.mobile-preview:hover {
+.mobile-preview-zoom {
   transform: scale(1.2) translateX(-15%);
   transition: transform 400ms ease-in;
   z-index: 20;
+}
+
+.un-hover {
+  transform: scale(0.5);
+  transition: transform 400ms ease-out;
 }
 
 .fa-hand-point-up {
