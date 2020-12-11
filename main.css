@@ -143,14 +143,14 @@ hr {
   background-color: var(--light);
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  transition: background-color 200ms ease-out;
+  transition: color 200ms ease-out, background-color 200ms ease-out;
 }
 
 .source-code:hover {
   background-color: var(--dark);
   color: var(--white);
   cursor: pointer;
-  transition: background-color 200ms ease-in;
+  transition: color 200ms ease-in, background-color 200ms ease-in;
 }
 
 .source-code:active {
@@ -163,15 +163,16 @@ hr {
 }
 
 .mobile-preview {
-  width: 25%;
+  width: 50%;
   position: absolute;
-  bottom: 0;
-  right: 20px;
+  bottom: -65px;
+  right: -25px;
+  transform: scale(0.5);
   transition: transform 400ms ease-out;
 }
 
 .mobile-preview:hover {
-  transform: scale(2.5) translateX(-15%);
+  transform: scale(1.2) translateX(-15%);
   transition: transform 400ms ease-in;
   z-index: 20;
 }
@@ -222,6 +223,7 @@ footer {
 
 .attribution {
   text-align: left;
+  font-size: 0.5rem;
 }
 
 @media (min-width: 40rem) {
@@ -264,8 +266,13 @@ footer {
     transition: text-decoration 200ms ease-in;
   }
 
+  .mobile-preview {
+    bottom: -185px;
+    right: -70px;
+  }
+
   .mobile-preview:hover {
-    transform: scale(2) translate(-25%, -15%);
+    transform: scale(1) translate(-25%, -15%);
     transition: transform 400ms ease-in;
   }
 
