@@ -5,7 +5,6 @@ var modal = document.querySelector(".modal");
 for (i=0; i<resume.length; i++) {
     resume[i].addEventListener("click", () => {
         openModal();
-        console.log("clicked");
     })
 }
 
@@ -35,6 +34,5 @@ var mobilePreviews = document.querySelectorAll(".mobile-preview");
 for (i=0; i<mobilePreviews.length; i++) {
     mobilePreviews[i].addEventListener("click", (e) => {
         e.target.classList.toggle("mobile-preview-zoom");
-        console.log("unhover");
     })
 }

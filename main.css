@@ -140,17 +140,21 @@ hr {
 .source-code {
   display: inline-block;
   border: 1px solid var(--medium);
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
   background-color: var(--light);
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  transition: color 200ms ease-out, background-color 200ms ease-out;
+  transition: color 150ms ease-out, background-color 200ms ease-out,
+    box-shadow 150ms ease-out;
 }
 
 .source-code:hover {
   background-color: var(--dark);
   color: var(--white);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: color 200ms ease-in, background-color 200ms ease-in;
+  transition: color 150ms ease-in, background-color 200ms ease-in,
+    box-shadow 150ms ease-in;
 }
 
 .source-code:active {
