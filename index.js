@@ -65,7 +65,9 @@ function carousel(root) {
             var xOrigin = parseFloat(getComputedStyle(container).width) / 2;
             var yOrigin = parseFloat(getComputedStyle(container).height) / 2;
             container.style.WebkitTransformOrigin = `center center ${- apothem}px`;
-            container.style.transformOrigin = `center center ${- apothem}px`;
+            container.style.transformOrigin = `center center`;
+            container.style.transform = `translateZ(${- apothem}px)`;
+            //  ${- apothem}px`;
             // container.style.WebkitTransformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
             // container.style.transformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
             
@@ -83,7 +85,9 @@ function carousel(root) {
 
                 headings[i].style.WebkitTransformOrigin = `center center ${- apothem}px`;
                 // headings[i].style.WebkitTransformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
-                headings[i].style.transformOrigin = `center center ${- apothem}px`;
+                headings[i].style.transformOrigin = `center center`;
+                //  ${- apothem}px`;
+                headings[i].style.transform = `translateZ(${- apothem}px)`
                 // headings[i].style.transformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
                 
                 headings[i].style.WebkitTransform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
