@@ -129,6 +129,6 @@ function carousel(root) {
         }
 
         function rotateCarousel(headingIndex) {
-            container.style.transform = `rotateY(${headingIndex * - theta}rad)`;
+            container.style.transform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }
