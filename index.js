@@ -64,6 +64,8 @@ function carousel(root) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
 
             container.style.transformOrigin = `50% 50% ${- apothem}px`;
+            container.style.transformBox = "fill-box";
+
 
             for (i=0; i < n; i++) {
                 headings[i].style.padding = `0 ${gap}px`;

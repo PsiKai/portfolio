@@ -230,6 +230,7 @@ hr {
   bottom: -45px;
   right: 45px;
   animation: float-small 1.5s ease-in-out infinite;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
