@@ -73,7 +73,10 @@ function carousel(root) {
                 // headings[i].style.backfaceVisibility = "hidden";
             }
             for (i=1; i < n; i++) {
-                headings[i].style.transformOrigin = `${parseFloat(getComputedStyle(headings[i]).width) / 2}px ${parseFloat(getComputedStyle(headings[i]).height) / 2}px ${- apothem}px`;
+                var origin = getComputedStyle(headings[i]);
+                var originX = parseFloat(origin.width);
+                var originY = parseFloat(origin.height);
+                headings[i].style.transformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
                 headings[i].style.transform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
             } 
 
