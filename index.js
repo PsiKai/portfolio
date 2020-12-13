@@ -71,7 +71,7 @@ function carousel(root) {
             }
             for (i=1; i < n; i++) {
                 headings[i].style.transformOrigin = `50% 50% ${- apothem}px`;
-                headings[i].style.transform = `rotateY(${i * theta}rad)`;
+                headings[i].style.transform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
             } 
 
             rotateCarousel(currHead);
