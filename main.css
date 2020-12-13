@@ -142,6 +142,7 @@ hr {
 .item-container {
   margin: 0;
   transform-style: preserve-3d;
+  transform-box: fill-box;
   width: 100%;
   min-width: 300px;
   transition: transform 0.5s cubic-bezier(0.505, 0.26, 0.11, 1.26);

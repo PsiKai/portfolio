@@ -62,9 +62,10 @@ function carousel(root) {
 
         function setupCarousel(n, s) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
-
-            container.style.transformOrigin = `50% 50% ${- apothem}px`;
-            container.style.transformBox = "fill-box";
+            var xOrigin = parseFloat(getComputedStyle(container).width) / 2;
+            var yOrigin = parseFloat(getComputedStyle(container).height) / 2;
+            container.style.transformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
+            // container.style.transformBox = "fill-box";
 
 
             for (i=0; i < n; i++) {
@@ -72,7 +73,7 @@ function carousel(root) {
                 // headings[i].style.backfaceVisibility = "hidden";
             }
             for (i=1; i < n; i++) {
-                headings[i].style.transformOrigin = `50% 50% ${- apothem}px`;
+                headings[i].style.transformOrigin = `${parseFloat(getComputedStyle(headings[i]).width) / 2}px ${parseFloat(getComputedStyle(headings[i]).height) / 2}px ${- apothem}px`;
                 headings[i].style.transform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
             } 
 
