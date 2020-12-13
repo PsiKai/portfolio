@@ -143,6 +143,7 @@ hr {
 .item-container {
   margin: 0;
   transform-style: preserve-3d;
+  -webkit-transform-box: fill-box;
   transform-box: fill-box;
   width: 100%;
   min-width: 300px;
