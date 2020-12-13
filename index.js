@@ -129,6 +129,7 @@ function carousel(root) {
         }
 
         function rotateCarousel(headingIndex) {
+            container.style.WebkitTransform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
             container.style.transform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }
