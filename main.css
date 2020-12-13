@@ -150,6 +150,8 @@ hr {
 .item-container div {
   text-align: center;
   width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   /* transform-style: preserve-3d; */
 }
 

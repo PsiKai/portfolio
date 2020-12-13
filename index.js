@@ -67,7 +67,7 @@ function carousel(root) {
 
             for (i=0; i < n; i++) {
                 headings[i].style.padding = `0 ${gap}px`;
-                headings[i].style.backfaceVisibility = "hidden";
+                // headings[i].style.backfaceVisibility = "hidden";
             }
             for (i=1; i < n; i++) {
                 headings[i].style.transformOrigin = `50% 50% ${- apothem}px`;
