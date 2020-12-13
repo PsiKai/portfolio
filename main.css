@@ -142,6 +142,7 @@ hr {
 
 .item-container {
   margin: 0;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transform-box: fill-box;
   transform-box: fill-box;
@@ -168,7 +169,10 @@ hr {
   margin: 2rem 0;
   /* height: 100vh; */
   vertical-align: middle;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transform-box: fill-box;
+  transform-box: fill-box;
   /* backface-visibility: hidden !important; */
 }
 
