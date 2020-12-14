@@ -214,6 +214,7 @@ hr {
 .screen-previews {
   position: relative;
   transform-style: preserve-3d;
+  z-index: 2;
   /* backface-visibility: hidden !important; */
 }
 
