@@ -128,8 +128,8 @@ hr {
 
 .carousel {
   /* padding: 20px; */
-  /* -webkit-perspective: 10000px;
-  perspective: 10000px; */
+  /* -webkit-perspective: 10000px; */
+  perspective: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
