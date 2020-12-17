@@ -64,7 +64,7 @@ function carousel(root) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
             var xOrigin = parseFloat(getComputedStyle(container).width) / 2;
             var yOrigin = parseFloat(getComputedStyle(container).height) / 2;
-            container.style.WebkitTransformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
+            container.style.webkitTransformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
             container.style.transformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
             
             // container.style.transformBox = "fill-box";
@@ -79,10 +79,10 @@ function carousel(root) {
                 var originX = parseFloat(origin.width);
                 var originY = parseFloat(origin.height);
 
-                headings[i].style.WebkitTransformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
+                headings[i].style.webkitTransformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
                 headings[i].style.transformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
                 
-                headings[i].style.WebkitTransform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
+                headings[i].style.webkitTransform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
                 headings[i].style.transform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
                 
             } 
@@ -129,7 +129,7 @@ function carousel(root) {
         }
 
         function rotateCarousel(headingIndex) {
-            container.style.WebkitTransform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
+            container.style.webkitTransform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
             container.style.transform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }

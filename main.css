@@ -133,7 +133,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .carousel > * {
@@ -144,7 +144,6 @@ hr {
   margin: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform-box: fill-box;
   transform-box: fill-box;
   width: 100%;
   min-width: 300px;
@@ -173,7 +172,6 @@ hr {
   vertical-align: middle;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform-box: fill-box;
   transform-box: fill-box;
   /* backface-visibility: hidden !important; */
 }
