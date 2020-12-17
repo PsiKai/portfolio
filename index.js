@@ -63,13 +63,14 @@ function carousel(root) {
         function setupCarousel(n, s) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
             var carousel = document.querySelector(".carousel");
-            carousel.style.perspective = `${2 * apothem}px`
+            carousel.style.perspective = `${2 * apothem}px`;
+            carousel.style.transformOrigin = `50% 50% ${apothem}px`;
             container.style.transformOrigin = `50% 50% ${- apothem}px`;
 
             for (i=0; i < n; i++) {
                 headings[i].style.padding = `0 ${gap}px`;
             }
-            for (i=1; i < n; i++) {
+            for (i=0; i < n; i++) {
                 headings[i].style.transformOrigin = `50% 50% ${- apothem}px`;
                 headings[i].style.transform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
                 
