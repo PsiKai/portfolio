@@ -62,13 +62,13 @@ function carousel(root) {
 
         function setupCarousel(n, s) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
-            
             container.style.transformOrigin = `50% 50%`;
             container.style.transform = `translateZ(${- apothem}px)`;
             headings[0].style.transform = `translateZ(${apothem}px)`;
 
             for (i=0; i < n; i++) {
                 headings[i].style.padding = `0 ${gap}px`;
+            
             }
             for (i=0; i < n; i++) {
                 headings[i].style.transformOrigin = `50% 50%`;
@@ -118,6 +118,7 @@ function carousel(root) {
         }
 
         function rotateCarousel(headingIndex) {
-            container.style.transform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
+            var apothem = parseFloat(getComputedStyle(headings[0]).width) / (2 * Math.tan(Math.PI / n));
+            container.style.transform = `translateZ(${- apothem}px) rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }
