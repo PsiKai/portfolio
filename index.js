@@ -62,27 +62,15 @@ function carousel(root) {
 
         function setupCarousel(n, s) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
-            var xOrigin = parseFloat(getComputedStyle(container).width) / 2;
-            var yOrigin = parseFloat(getComputedStyle(container).height) / 2;
-            container.style.webkitTransformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
-            container.style.transformOrigin = `${xOrigin}px ${yOrigin}px ${- apothem}px`;
-            
-            // container.style.transformBox = "fill-box";
-
+            var carousel = document.querySelector(".carousel");
+            carousel.style.perspective = `${2 * apothem}px`
+            container.style.transformOrigin = `50% 50% ${- apothem}px`;
 
             for (i=0; i < n; i++) {
                 headings[i].style.padding = `0 ${gap}px`;
-                // headings[i].style.backfaceVisibility = "hidden";
             }
             for (i=1; i < n; i++) {
-                var origin = getComputedStyle(headings[i]);
-                var originX = parseFloat(origin.width);
-                var originY = parseFloat(origin.height);
-
-                headings[i].style.webkitTransformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
-                headings[i].style.transformOrigin = `${originX / 2}px ${originY / 2}px ${- apothem}px`;
-                
-                headings[i].style.webkitTransform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
+                headings[i].style.transformOrigin = `50% 50% ${- apothem}px`;
                 headings[i].style.transform = `rotateY(${(i * theta) * (180 / Math.PI)}deg)`;
                 
             } 
@@ -129,7 +117,6 @@ function carousel(root) {
         }
 
         function rotateCarousel(headingIndex) {
-            container.style.webkitTransform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
             container.style.transform = `rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }
