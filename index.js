@@ -1,3 +1,5 @@
+
+//sets up resume modal
 var resume = document.querySelectorAll("i.fa-file");
 var backdrop = document.querySelector(".backdrop");
 var modal = document.querySelector(".modal");
@@ -29,6 +31,8 @@ backdrop.addEventListener("click", () => {
     
 })
 
+
+//sets zoom-in of mobile preview on click
 var mobilePreviews = document.querySelectorAll(".mobile-preview");
 
 for (i=0; i<mobilePreviews.length; i++) {
