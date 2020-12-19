@@ -25,6 +25,7 @@ body {
   grid-template-areas: "header" "main" "footer";
   height: 100%;
   font-family: "Mukta", sans-serif;
+  scroll-snap-type: y;
 }
 
 header {
@@ -354,7 +355,78 @@ hr {
   text-align: right;
 }
 
+/* hobbies and interest section  */
+
+.hobbies-interests {
+}
+
+.hobbies--flex {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 1rem 0;
+  height: 120px;
+  transition: height 200ms ease-in, width 200ms ease-in, border 200ms ease-in;
+}
+
+.hobbies--hobby {
+  text-align: center;
+  display: inline-block;
+  height: 100px;
+  width: 3%;
+  flex-grow: 1;
+  transition: border 500ms ease-out, width 400ms ease-out 200ms,
+    transform 200ms ease-out, height 300ms ease-out 200ms,
+    flex-grow 400ms ease-out, display 400ms linear 200ms;
+}
+
+.expand-box {
+  margin: 1rem;
+  background-color: var(--light);
+  border: 2px solid var(--dark);
+  border-radius: 1rem;
+  flex-grow: 0.00001 !important;
+  transform: translateY(-120px);
+  height: 500px;
+  width: calc(100% - 2rem);
+  position: absolute !important;
+}
+
+.expand-box img {
+  position: absolute;
+  bottom: 0;
+  transform: scale(1.5) translateX(-35%);
+  transition: transform 400ms;
+}
+
+.hobbies--hobby p {
+  position: absolute;
+  margin: 2rem 1rem;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  height: fit-content(300px);
+}
+
+.reveal-text {
+  position: static !important;
+  opacity: 1 !important;
+  transition: position 0ms ease-in 600ms, opacity 200ms ease-in 600ms;
+}
+
+.hobbies--hobby img {
+  width: 100px;
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* footer section  */
+
 footer {
+  scroll-snap-align: end;
   text-align: center;
   position: relative;
   grid-area: footer;
@@ -476,6 +548,17 @@ footer i {
   .bio-icon,
   .programmer-icon {
     width: 30%;
+  }
+
+  .hobbies--hobby {
+    width: 100px;
+  }
+
+  .expand-box {
+    max-width: 804px;
+    width: calc(100vw - 7rem);
+    padding: 0 4rem;
+    height: 370px;
   }
 }
 

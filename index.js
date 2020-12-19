@@ -126,3 +126,34 @@ function carousel(root) {
             container.style.transform = `translateZ(${- apothem}px) rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }
+
+
+//Hobbies and interest section 
+
+var hobbies = document.querySelectorAll(".hobbies--hobby img");
+
+
+for (i = 0; i < hobbies.length; i++) {
+    hobbies[i].addEventListener("click", (e) => {
+        //expand container to fit content
+        var html = document.querySelector("html");
+        var hobbyFlexBox = document.querySelector(".hobbies--flex")
+        if (parseFloat(getComputedStyle(html).width) < 640) {
+            hobbyFlexBox.style.height = "100vh";
+        } else {
+            hobbyFlexBox.style.height = "600px";
+        }
+
+        //hide and diminish any previous hobbies
+        var revealed = document.querySelector(".reveal-text");
+        var expanded = document.querySelector(".expand-box");
+        expanded && expanded.classList.remove("expand-box");
+        revealed && revealed.classList.remove("reveal-text");
+
+        //reveal and expand hobby
+        e.target.parentNode.classList.add("expand-box");
+        // setTimeout(() => {
+            e.target.previousElementSibling.classList.add("reveal-text");
+        // }, 600)
+    })
+}
