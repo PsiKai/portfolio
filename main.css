@@ -25,7 +25,6 @@ body {
   grid-template-areas: "header" "main" "footer";
   height: 100%;
   font-family: "Mukta", sans-serif;
-  scroll-snap-type: y;
 }
 
 header {
@@ -382,7 +381,7 @@ hr {
 }
 
 .expand-box {
-  margin: 1rem;
+  margin: 1rem auto;
   background-color: var(--light);
   border: 2px solid var(--dark);
   border-radius: 1rem;
@@ -426,7 +425,6 @@ hr {
 /* footer section  */
 
 footer {
-  scroll-snap-align: end;
   text-align: center;
   position: relative;
   grid-area: footer;
