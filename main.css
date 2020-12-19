@@ -292,16 +292,60 @@ hr {
 .skills--main li {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
   background-color: var(--light);
   border-radius: 1rem;
   box-shadow: 0 0 5px 0 var(--medium);
   margin: 2rem 0;
   padding: 1rem;
+  position: relative;
+  transition: box-shadow 200ms ease;
+}
+
+.skills--main li:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  /* transition: box-shadow 200ms ease; */
+}
+
+.skills--main i {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  text-align: right;
+  opacity: 0.6;
+  transition: opacity 200ms ease-out;
+}
+
+.opacity {
+  opacity: 0 !important;
+  /* transition: opacity 200ms ease-in !important; */
+}
+
+.skills--main span {
+  height: 0.1px;
+
+  overflow: hidden;
+  transition: height 200ms ease;
+}
+
+.skill-height {
+  height: 250px !important;
+  padding-top: 1.5rem;
+  /* transition: height 200 ms ease-in !important; */
 }
 
 .skills--main img {
-  width: 50%;
+  flex-grow: 0.01;
+  width: 40%;
   margin: 1rem auto;
+  transition: width 200ms ease, flex-grow 200ms ease;
+}
+
+.skill-width {
+  flex-grow: 1;
+  justify-content: center;
+  width: 60% !important;
 }
 
 .skills--lesser {
@@ -516,9 +560,7 @@ footer i {
   }
 
   .skills--main li {
-    flex-direction: row;
     align-items: center;
-    min-height: 280px;
   }
 
   .skills--main img {
@@ -526,8 +568,18 @@ footer i {
     margin: 1rem;
   }
 
+  .skill-width {
+    width: 50% !important;
+  }
+
   .skills--main span {
-    padding: 0 1rem;
+    padding: 0 4rem;
+    transition: height 200ms ease, padding 200ms ease;
+  }
+
+  .skill-height {
+    padding: 2rem 4rem !important;
+    height: 200px !important;
   }
 
   .skills--lesser {

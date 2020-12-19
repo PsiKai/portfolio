@@ -127,22 +127,27 @@ function carousel(root) {
         }
 }
 
+//skills section 
+
+var skills = document.querySelectorAll(".skills--main li");
+
+for (i = 0; i < skills.length; i++) {
+    skills[i].addEventListener("click", (e) => {
+        e.currentTarget.children[0].classList.toggle("skill-width");
+        e.currentTarget.children[3].classList.toggle("skill-height");
+        e.currentTarget.children[1].classList.toggle("opacity");
+        e.currentTarget.children[2].classList.toggle("opacity");
+    })
+}
+
+
 
 //Hobbies and interest section 
 
 var hobbies = document.querySelectorAll(".hobbies--hobby img");
 
-
 for (i = 0; i < hobbies.length; i++) {
     hobbies[i].addEventListener("click", (e) => {
-        //expand container to fit content
-        // var html = document.querySelector("html");
-        // var hobbyFlexBox = document.querySelector(".hobbies--flex")
-        // if (parseFloat(getComputedStyle(html).width) < 640) {
-        //     hobbyFlexBox.style.height = "100vh";
-        // } else {
-        //     hobbyFlexBox.style.height = "600px";
-        // }
 
         //hide and diminish any previous hobbies
         var revealed = document.querySelector(".reveal-text");
@@ -153,8 +158,5 @@ for (i = 0; i < hobbies.length; i++) {
         //reveal and expand hobby
         e.target.parentNode.classList.add("expand-box");
         e.target.previousElementSibling.classList.add("reveal-text");
-        // setTimeout(() => {         
-        //     e.target.previousElementSibling.style.height = "auto !important"
-        // }, 700)
     })
 }
