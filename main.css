@@ -378,7 +378,7 @@ hr {
   border: 2px solid var(--dark);
   border-radius: 1rem;
   flex-grow: 0 !important;
-  transform: translateY(-75px);
+  transform: translateY(-90px);
   height: 500px;
   width: calc(100% - 2rem);
   position: absolute !important;
@@ -556,6 +556,7 @@ footer i {
     width: calc(100vw - 7rem);
     padding: 0 4rem;
     height: 420px;
+    transform: translateY(-75px);
   }
 
   .hobbies--hobby img {
