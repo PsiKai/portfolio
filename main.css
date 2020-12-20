@@ -14,6 +14,20 @@
 
 html {
   height: 100%;
+  scrollbar-color: var(--medium) var(--light);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--medium);
 }
 
 body {
@@ -25,6 +39,11 @@ body {
   grid-template-areas: "header" "main" "footer";
   height: 100%;
   font-family: "Mukta", sans-serif;
+}
+
+p,
+span {
+  line-height: 1.2rem;
 }
 
 header {
@@ -99,6 +118,22 @@ main {
   background: white;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--medium) var(--light);
+  scrollbar-width: thin;
+}
+
+.modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: var(--medium);
 }
 
 .open {
@@ -292,7 +327,6 @@ hr {
 .skills--main li {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   background-color: var(--light);
   border-radius: 1rem;
   box-shadow: 0 0 5px 0 var(--medium);
@@ -305,7 +339,6 @@ hr {
 .skills--main li:hover {
   cursor: pointer;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-  /* transition: box-shadow 200ms ease; */
 }
 
 .skills--main i {
@@ -319,7 +352,6 @@ hr {
 
 .opacity {
   opacity: 0 !important;
-  /* transition: opacity 200ms ease-in !important; */
 }
 
 .skills--main span {
@@ -330,9 +362,8 @@ hr {
 }
 
 .skill-height {
-  height: 280px !important;
+  height: 220px !important;
   padding-top: 1.5rem;
-  /* transition: height 200 ms ease-in !important; */
 }
 
 .skills--main img {
@@ -403,7 +434,7 @@ hr {
   justify-content: space-around;
   align-items: flex-end;
   padding: 1rem 0;
-  height: 100vh;
+  height: 550px;
   max-height: 640px;
 }
 
@@ -423,7 +454,7 @@ hr {
   border-radius: 1rem;
   flex-grow: 0 !important;
   transform: translateY(-90px);
-  height: 500px;
+  height: 400px;
   width: calc(100% - 2rem);
   position: absolute !important;
   transition: border 200ms ease-out, width 500ms ease-out 200ms,
@@ -486,6 +517,11 @@ footer i {
 /* Desktop screen styles */
 
 @media (min-width: 40rem) {
+  p,
+  span {
+    line-height: normal;
+  }
+
   .avatar {
     width: 300px;
   }
@@ -638,10 +674,12 @@ footer i {
 /* very narrow width screens  */
 
 @media (max-width: 370px) {
+  .skill-height {
+    height: 250px !important;
+  }
+
   .expand-box {
-    width: 100vw;
-    margin: 0.5rem;
-    height: 470px;
+    width: calc(100% - 1rem);
   }
 
   .expand-box img {

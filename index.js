@@ -42,6 +42,8 @@ for (i=0; i<mobilePreviews.length; i++) {
 }
 
 
+//sets up 3d carousel
+
 window.addEventListener("load", () => {
     carousel(document.querySelector(".carousel"));
 })
