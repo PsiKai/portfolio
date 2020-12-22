@@ -125,6 +125,7 @@ function carousel(root) {
 
         function rotateCarousel(headingIndex) {
             var apothem = parseFloat(getComputedStyle(headings[0]).width) / (2 * Math.tan(Math.PI / n));
+            // var carouselIndex = headingIndex % n;
             container.style.transform = `translateZ(${- apothem}px) rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }
