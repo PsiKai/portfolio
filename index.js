@@ -34,11 +34,23 @@ backdrop.addEventListener("click", () => {
 
 //sets zoom-in of mobile preview on click
 var mobilePreviews = document.querySelectorAll(".mobile-preview");
+var html = document.querySelector("html")
 
 for (i=0; i<mobilePreviews.length; i++) {
-    mobilePreviews[i].addEventListener("click", (e) => {
-        e.target.classList.toggle("mobile-preview-zoom");
-    })
+    // if (parseFloat(getComputedStyle(html).width) < 640) {
+        mobilePreviews[i].addEventListener("click", (e) => {
+            e.target.classList.toggle("mobile-preview-zoom")
+        });
+    // } 
+    // else {
+    //     mobilePreviews[i].addEventListener("mouseover", (e) => {
+    //         e.target.classList.add("mobile-preview-zoom")
+    //     });
+    //     mobilePreviews[i].addEventListener("mouseout", (e) => {
+    //         e.target.classList.remove("mobile-preview-zoom")
+    //     });
+    // }
+
 }
 
 
@@ -53,7 +65,7 @@ function carousel(root) {
         nav = root.querySelector("nav"),
         headings = container.children,
         n = headings.length,
-        html = document.querySelector("html"),
+        // html = document.querySelector("html"),
         gap = parseFloat(getComputedStyle(html).width) > 640 ? 20 : 8,
         theta = 2 * Math.PI / n,
         currHead = 0

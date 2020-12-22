@@ -240,7 +240,7 @@ hr {
 .screen-previews {
   position: relative;
   transform-style: preserve-3d;
-  z-index: 2;
+  z-index: 1;
 }
 
 .mobile-preview {
@@ -253,15 +253,14 @@ hr {
   transition: transform 400ms ease-out;
 }
 
-.mobile-preview-zoom {
-  transform: scale(1.2) translateX(-15%);
-  transition: transform 400ms ease-in;
-  z-index: 20;
+.mobile-preview:hover {
+  cursor: zoom-in;
 }
 
-.un-hover {
-  transform: scale(0.5);
-  transition: transform 400ms ease-out;
+.mobile-preview-zoom {
+  transform: scale(1.2) translateX(-15%);
+  z-index: 20;
+  cursor: zoom-out !important;
 }
 
 .fa-search-plus {
@@ -574,10 +573,9 @@ footer i {
     right: -5%;
   }
 
-  .mobile-preview-zoom,
-  .mobile-preview:hover {
+  .mobile-preview-zoom {
     transform: scale(1) translate(-25%, -15%);
-    transition: transform 400ms ease-in;
+    /* transition: transform 400ms ease-in; */
   }
 
   .fa-search-plus {
