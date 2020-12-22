@@ -33,14 +33,14 @@ backdrop.addEventListener("click", () => {
 
 
 //sets zoom-in of mobile preview on click
-var mobilePreviews = document.querySelectorAll(".mobile-preview");
+// var mobilePreviews = document.querySelectorAll(".mobile-preview");
 
-for (i=0; i<mobilePreviews.length; i++) {
-        mobilePreviews[i].addEventListener("click", (e) => {
-            e.target.classList.toggle("mobile-preview-zoom")
-            e.target.nextElementSibling.classList.toggle("opacity")
-        });
-}
+// for (i=0; i<mobilePreviews.length; i++) {
+//         mobilePreviews[i].addEventListener("click", (e) => {
+//             e.target.classList.toggle("mobile-preview-zoom")
+//             e.target.nextElementSibling.classList.toggle("opacity")
+//         });
+// }
 
 
 //sets up 3d carousel

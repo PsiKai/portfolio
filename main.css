@@ -224,8 +224,7 @@ hr {
 }
 
 .source-code:hover {
-  background-color: var(--dark);
-  color: var(--white);
+  background-color: var(--white);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: color 150ms ease-in, background-color 200ms ease-in,
@@ -241,38 +240,15 @@ hr {
   position: relative;
   transform-style: preserve-3d;
   z-index: 1;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .mobile-preview {
   backface-visibility: hidden;
-  width: 50%;
+  width: 30%;
   position: absolute;
-  bottom: -25%;
-  right: -5%;
-  transform: scale(0.5);
-  transition: transform 400ms ease-out;
-}
-
-.mobile-preview:hover {
-  cursor: zoom-in;
-}
-
-.mobile-preview-zoom {
-  transform: scale(1.2) translateX(-15%);
-  /* z-index: 20; */
-  cursor: zoom-out !important;
-}
-
-.fa-search-plus {
-  position: absolute;
-  padding: 1.5%;
-  opacity: 0.7;
-  bottom: 3%;
-  right: 22%;
-  background-color: var(--light);
-  border-radius: 35%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  bottom: 0;
+  right: 5%;
 }
 
 .website-description p {
@@ -569,17 +545,8 @@ footer i {
   }
 
   .mobile-preview {
-    bottom: -30%;
-    right: -5%;
-  }
-
-  .mobile-preview-zoom {
-    transform: scale(1) translate(-25%, -15%);
-    /* transition: transform 400ms ease-in; */
-  }
-
-  .fa-search-plus {
-    display: none !important;
+    bottom: -5%;
+    right: 5%;
   }
 
   .website-description {
