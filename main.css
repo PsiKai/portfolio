@@ -67,7 +67,6 @@ footer i:hover,
 header i:hover {
   cursor: pointer;
   color: var(--medium);
-  transition: color 100ms ease-in;
 }
 
 a {
@@ -331,7 +330,6 @@ hr {
 
 .skills--main span {
   height: 0.1px;
-
   overflow: hidden;
   transition: height 200ms ease;
 }
@@ -342,14 +340,12 @@ hr {
 }
 
 .skills--main img {
-  flex-grow: 0.01;
-  width: 40%;
-  margin: 1rem auto;
-  transition: width 200ms ease, flex-grow 200ms ease;
+  width: 30%;
+  margin: 0 auto;
+  transition: width 200ms ease;
 }
 
 .skill-width {
-  flex-grow: 1;
   justify-content: center;
   width: 60% !important;
 }
@@ -565,12 +561,11 @@ footer i {
   }
 
   .skills--main img {
-    width: 30%;
-    margin: 1rem;
+    width: 15%;
   }
 
   .skill-width {
-    width: 50% !important;
+    width: 40% !important;
   }
 
   .skills--main span {

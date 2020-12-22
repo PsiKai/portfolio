@@ -164,3 +164,44 @@ for (i = 0; i < hobbies.length; i++) {
         e.target.previousElementSibling.classList.add("reveal-text");
     })
 }
+
+
+//dark mode settings 
+
+// let root = document.documentElement;
+// let darkTheme = document.querySelector(".dark-theme");
+// let bio = document.querySelector(".quick-bio");
+// let skillArray = Array.from(skills);
+// let sourceCode = Array.from(document.querySelectorAll(".source-code"))
+// let nav = Array.from(document.querySelectorAll(".nav"));
+// let hobbyArray = Array.from(document.querySelectorAll(".hobbies--hobby"));
+// var darkMode = false;
+
+// darkTheme.addEventListener("click", () => {
+//     if (darkMode === true) {
+//         darkMode = false;
+//         root.style.setProperty("--light", "#e8e8e8")
+//         root.style.setProperty("--medium", "#bbbfca")
+//         root.style.setProperty("--dark", "#495464")
+//         root.style.setProperty("--white", "#f4f4f2")
+//         bio.style.setProperty("color", "var(--dark)")
+//         skillArray.forEach(skill => skill.style.setProperty("color", "var(--dark)"))
+//         sourceCode.forEach(source => source.style.setProperty("color", "var(--dark)"))
+//         nav.forEach(nav => nav.style.setProperty("color", "var(--dark)"))
+//         hobbyArray.forEach(hobby => hobby.style.setProperty("color", "var(--dark)"))
+//     } else if (darkMode === false) {
+//         darkMode = true;
+//         root.style.setProperty("--light", "#bbbfca")
+//         root.style.setProperty("--medium", "#e8e8e8")
+//         root.style.setProperty("--dark", "#f4f4f2")
+//         root.style.setProperty("--white", "#495464")
+//         bio.style.setProperty("color", "var(--white)")
+//         skillArray.forEach(skill => skill.style.setProperty("color", "var(--white)"))
+//         sourceCode.forEach(source => source.style.setProperty("color", "var(--white)"))
+//         nav.forEach(nav => nav.style.setProperty("color", "var(--white)"))
+//         hobbyArray.forEach(hobby => hobby.style.setProperty("color", "var(--white)"))
+//     }
+// })
+
+
+    
