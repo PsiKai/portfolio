@@ -358,7 +358,7 @@ hr {
   background-color: var(--white);
   color: var(--dark);
   border-radius: 4rem;
-  padding: 3rem 0;
+  padding: 2rem 0;
   margin: 2rem 0;
   text-align: center;
   border: 10px double var(--light);
