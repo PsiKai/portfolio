@@ -259,7 +259,7 @@ hr {
 
 .mobile-preview-zoom {
   transform: scale(1.2) translateX(-15%);
-  z-index: 20;
+  /* z-index: 20; */
   cursor: zoom-out !important;
 }
 
