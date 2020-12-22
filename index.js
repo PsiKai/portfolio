@@ -38,6 +38,7 @@ var mobilePreviews = document.querySelectorAll(".mobile-preview");
 for (i=0; i<mobilePreviews.length; i++) {
         mobilePreviews[i].addEventListener("click", (e) => {
             e.target.classList.toggle("mobile-preview-zoom")
+            e.target.nextElementSibling.classList.toggle("opacity")
         });
 }
 

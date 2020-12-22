@@ -240,7 +240,7 @@ hr {
 .screen-previews {
   position: relative;
   transform-style: preserve-3d;
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 .mobile-preview {
