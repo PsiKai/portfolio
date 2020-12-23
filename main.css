@@ -168,9 +168,9 @@ hr {
   overflow: hidden;
 }
 
-.carousel > * {
+/* .carousel > * {
   flex: 0 0 auto;
-}
+} */
 
 .item-container {
   margin: 0;
@@ -203,7 +203,7 @@ hr {
   transform-box: fill-box;
 }
 
-.website-example {
+.website-url {
   font-size: 1.2rem;
   text-align: center;
   text-decoration: underline;
@@ -524,14 +524,14 @@ footer i {
     padding: 0;
   }
 
-  .website-example {
+  .website-url {
     display: inline-block;
     font-size: 1.5rem;
     text-decoration: none;
     transition: text-decoration 200ms ease-out;
   }
 
-  .website-example:hover {
+  .website-url:hover {
     text-decoration: underline;
     transition: text-decoration 200ms ease-in;
   }

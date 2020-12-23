@@ -1,14 +1,14 @@
 
 //sets up resume modal
-var resume = document.querySelectorAll("i.fa-file");
+var resumeIcons = document.querySelectorAll("i.fa-file");
 var backdrop = document.querySelector(".backdrop");
 var modal = document.querySelector(".modal");
 
-for (i=0; i<resume.length; i++) {
-    resume[i].addEventListener("click", () => {
+resumeIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
         openModal();
     })
-}
+})
 
 const openModal = () => {
     setTimeout(() => {
@@ -24,24 +24,13 @@ const openModal = () => {
 backdrop.addEventListener("click", () => {
     modal.classList.remove("open");
     backdrop.classList.remove("open");
+
     setTimeout(() => {
         backdrop.style.display = "none";
         modal.style.display = "none";
     }, 200);
     
 })
-
-
-//sets zoom-in of mobile preview on click
-// var mobilePreviews = document.querySelectorAll(".mobile-preview");
-
-// for (i=0; i<mobilePreviews.length; i++) {
-//         mobilePreviews[i].addEventListener("click", (e) => {
-//             e.target.classList.toggle("mobile-preview-zoom")
-//             e.target.nextElementSibling.classList.toggle("opacity")
-//         });
-// }
-
 
 //sets up 3d carousel
 
@@ -52,17 +41,17 @@ window.addEventListener("load", () => {
 function carousel(root) {
     var container = root.querySelector(".item-container"),
         nav = root.querySelector("nav"),
-        headings = container.children,
-        n = headings.length,
+        carouselCards = Array.from(container.children),
+        n = carouselCards.length,
         html = document.querySelector("html"),
-        gap = parseFloat(getComputedStyle(html).width) > 640 ? 20 : 8,
+        gap = parseFloat(getComputedStyle(html).width) > 640 ? 24 : 8,
         theta = 2 * Math.PI / n,
         currHead = 0
     ;
 
-    setupCarousel(n, parseFloat(getComputedStyle(headings[0]).width));
+    setupCarousel(n, parseFloat(getComputedStyle(carouselCards[0]).width));
         window.addEventListener("resize", () => {
-            setupCarousel(n, parseFloat(getComputedStyle(headings[0]).width))
+            setupCarousel(n, parseFloat(getComputedStyle(carouselCards[0]).width))
         });
         
         setupNavigation();
@@ -71,16 +60,16 @@ function carousel(root) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
             container.style.transformOrigin = `50% 50%`;
             container.style.transform = `translateZ(${- apothem}px)`;
-            headings[0].style.transform = `translateZ(${apothem}px)`;
+            carouselCards[0].style.transform = `translateZ(${apothem}px)`;
 
             for (i=0; i < n; i++) {
-                headings[i].style.padding = `0 ${gap}px`;
-            
-            }
-            for (i=0; i < n; i++) {
-                headings[i].style.transformOrigin = `50% 50%`;
-                headings[i].style.transform = `rotateY(${(i * theta) * (180 / Math.PI)}deg) translateZ(${apothem}px)`;
-                
+                carouselCards[i].style.padding = `0 ${gap}px`;
+                carouselCards[i].style.transformOrigin = `50% 50%`;
+                carouselCards[i].style.transform = 
+                    `
+                    rotateY(${(i * theta) * (180 / Math.PI)}deg) 
+                    translateZ(${apothem}px)
+                    `   
             } 
 
             rotateCarousel(currHead);
@@ -90,43 +79,23 @@ function carousel(root) {
             nav.addEventListener("click", onClick, true);
 
             function onClick(e) {
-                e.stopPropagation();
+                var t = e.target.classList;
 
-                var t = e.target;
-                if (t.tagName.toUpperCase() != 'BUTTON') {
-                    if (t.tagName.toUpperCase() != 'I')
-                    return;
-                }
-                 
-                if (t.classList.contains('next')) {
-                    removeZoom();
-                    currHead++;
-                }
-                if (t.classList.contains('fa-chevron-right')) {
-                    removeZoom();
-                    currHead++;
-                }
-                if (t.classList.contains('prev')) {
-                    removeZoom();
-                    currHead--;
-                }
-                if (t.classList.contains('fa-chevron-left')) {
-                    removeZoom();
-                    currHead--;
-                }
+                // Rotate carousel right 
+                if (t.contains('next')) {currHead++;}
+                if (t.contains('fa-chevron-right')) {currHead++;}
 
-                function removeZoom() {
-                    var zoomed = document.querySelector(".mobile-preview-zoom");
-                    zoomed && zoomed.classList.remove("mobile-preview-zoom");
-                }
+                // Rotate carousel left 
+                if (t.contains('prev')) {currHead--;}
+                if (t.contains('fa-chevron-left')) {currHead--;}
 
                 rotateCarousel(currHead);
             }
         }
 
         function rotateCarousel(headingIndex) {
-            var apothem = parseFloat(getComputedStyle(headings[0]).width) / (2 * Math.tan(Math.PI / n));
-            // var carouselIndex = headingIndex % n;
+            var apothem = parseFloat(getComputedStyle(carouselCards[0]).width) / (2 * Math.tan(Math.PI / n));
+
             container.style.transform = `translateZ(${- apothem}px) rotateY(${(headingIndex * - theta) * (180 / Math.PI)}deg)`;
         }
 }
@@ -135,23 +104,22 @@ function carousel(root) {
 
 var skills = document.querySelectorAll(".skills--main li");
 
-for (i = 0; i < skills.length; i++) {
-    skills[i].addEventListener("click", (e) => {
-        e.currentTarget.children[0].classList.toggle("skill-width");
-        e.currentTarget.children[3].classList.toggle("skill-height");
-        e.currentTarget.children[1].classList.toggle("opacity");
-        e.currentTarget.children[2].classList.toggle("opacity");
+skills.forEach(skill => {
+    skill.addEventListener("click", (e) => {
+        var child = e.currentTarget.children;
+        child[0].classList.toggle("skill-width");
+        child[3].classList.toggle("skill-height");
+        child[1].classList.toggle("opacity");
+        child[2].classList.toggle("opacity");
     })
-}
-
-
+})
 
 //Hobbies and interest section 
 
 var hobbies = document.querySelectorAll(".hobbies--hobby img");
 
-for (i = 0; i < hobbies.length; i++) {
-    hobbies[i].addEventListener("click", (e) => {
+hobbies.forEach(hobby => {
+    hobby.addEventListener("click", (e) => {
 
         //hide and diminish any previous hobbies
         var revealed = document.querySelector(".reveal-text");
@@ -159,12 +127,11 @@ for (i = 0; i < hobbies.length; i++) {
         expanded.classList.remove("expand-box");
         revealed.classList.remove("reveal-text");
 
-        //reveal and expand hobby
+        //reveal and expand current hobby
         e.target.parentNode.classList.add("expand-box");
         e.target.previousElementSibling.classList.add("reveal-text");
     })
-}
-
+})
 
 //dark mode settings 
 
