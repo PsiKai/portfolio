@@ -321,7 +321,7 @@ hr {
   top: 1rem;
   text-align: right;
   opacity: 0.6;
-  transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out 200ms;
 }
 
 .opacity {
