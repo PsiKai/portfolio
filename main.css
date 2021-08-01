@@ -43,7 +43,7 @@ body {
 
 p,
 span {
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 }
 
 header {
@@ -154,6 +154,7 @@ main img {
 .my-works h1 {
   text-align: center;
   font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 hr {
@@ -165,7 +166,6 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 /* .carousel > * {
@@ -507,7 +507,8 @@ footer i {
 
   .quick-bio {
     padding: 2rem 5rem;
-    margin: 4rem 0;
+    margin: 4rem auto;
+    max-width: 85%;
   }
 
   .my-works h1 {
@@ -515,7 +516,7 @@ footer i {
   }
 
   .carousel {
-    margin: 4rem auto;
+    margin: 2rem auto;
   }
 
   .website-examples {
