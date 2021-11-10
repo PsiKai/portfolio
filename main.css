@@ -39,6 +39,14 @@ body {
   grid-template-areas: "header" "main" "footer";
   height: 100%;
   font-family: "Mukta", sans-serif;
+  opacity: 0;
+  animation: fadein 500ms ease 100ms forwards;
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
 }
 
 p,
@@ -72,6 +80,8 @@ header i:hover {
 a {
   text-decoration: none;
   color: inherit;
+  min-height: 2rem;
+  display: inline-block;
 }
 
 header h1 {
@@ -480,6 +490,10 @@ footer {
 
 footer i {
   margin-bottom: 1rem;
+}
+
+footer a {
+  min-height: 0;
 }
 
 .attribution {
