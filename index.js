@@ -35,10 +35,9 @@ backdrop.addEventListener("click", () => {
 //sets up 3d carousel
 
 window.addEventListener("load", () => {
-    var carouselPanes = document.querySelector(".website-examples")
-    var transition = "transform 0.5s cubic-bezier(0.505, 0.26, 0.11, 1.26)"
-    setTimeout(carouselPanes.style.transition = transition, 500)
-    carousel(document.querySelector(".carousel"));
+    const carouselDiv = document.querySelector(".carousel")
+    setTimeout(() => {carouselDiv.style.opacity = 1}, 400)
+    carousel(carouselDiv);
 })
 
 function carousel(root) {
