@@ -62,7 +62,7 @@ header {
   text-align: center;
   width: 100%;
   padding-bottom: 1rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 footer i,
@@ -157,7 +157,7 @@ main img {
 .quick-bio {
   padding: 0.5rem 1rem;
   background-color: var(--light);
-  box-shadow: 0 0 5px 0 var(--medium);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
   margin: 2rem 0;
 }
 
@@ -226,7 +226,7 @@ hr {
 .source-code {
   display: inline-block;
   border: 1px solid var(--medium);
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
   background-color: var(--light);
   border-radius: 4px;
   padding: 0.5rem 1rem;
@@ -236,7 +236,7 @@ hr {
 
 .source-code:hover {
   background-color: var(--white);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: color 150ms ease-in, background-color 200ms ease-in,
     box-shadow 150ms ease-in;
@@ -315,7 +315,7 @@ hr {
   flex-direction: column;
   background-color: var(--light);
   border-radius: 1rem;
-  box-shadow: 0 0 5px 0 var(--medium);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   margin: 2rem 0;
   padding: 1rem;
   position: relative;
@@ -324,7 +324,7 @@ hr {
 
 .skills--main li:hover {
   cursor: pointer;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .skills--main i {
