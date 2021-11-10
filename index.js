@@ -32,12 +32,13 @@ backdrop.addEventListener("click", () => {
     
 })
 
-const carouselDiv = document.querySelector(".carousel")
-setTimeout(() => {carouselDiv.style.opacity = 1}, 500)
+const itemContainer = document.querySelector(".item-container")
+setTimeout(() => {itemContainer.style.transitionDuration = "800ms"}, 500)
 
 //sets up 3d carousel
 
 window.addEventListener("load", () => {
+    const carouselDiv = document.querySelector(".carousel")
     carousel(carouselDiv);
 })
 

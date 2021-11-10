@@ -177,7 +177,7 @@ hr {
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  transition: opacity 500ms ease;
+  animation: fadein 500ms ease 200ms forwards;
 }
 
 /* .carousel > * {
@@ -191,7 +191,8 @@ hr {
   transform-box: fill-box;
   width: 100%;
   min-width: 300px;
-  transition: transform 1s cubic-bezier(0.46, 0.02, 0.19, 1.24);
+  transition: transform cubic-bezier(0.46, 0.02, 0.19, 1.24);
+  transition-duration: 0s;
 }
 
 .item-container div {
