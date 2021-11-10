@@ -166,6 +166,8 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: opacity 500ms ease;
 }
 
 /* .carousel > * {
@@ -179,7 +181,7 @@ hr {
   transform-box: fill-box;
   width: 100%;
   min-width: 300px;
-  transition: transform 0.5s cubic-bezier(0.505, 0.26, 0.11, 1.26);
+  transition: transform 1s cubic-bezier(0.46, 0.02, 0.19, 1.24);
 }
 
 .item-container div {
@@ -244,7 +246,7 @@ hr {
 
 .mobile-preview {
   backface-visibility: hidden;
-  width: 30%;
+  width: 25%;
   position: absolute;
   bottom: 0;
   right: 5%;
@@ -539,11 +541,6 @@ footer i {
 
   .website-description {
     text-align: left !important;
-  }
-
-  .mobile-preview {
-    bottom: -5%;
-    right: 5%;
   }
 
   .website-description {
