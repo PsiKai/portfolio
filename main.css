@@ -161,6 +161,10 @@ main img {
   margin: 2rem 0;
 }
 
+.my-works {
+  overflow: hidden;
+}
+
 .my-works h1 {
   text-align: center;
   font-size: 1.5rem;
